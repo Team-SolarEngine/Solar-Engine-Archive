@@ -183,13 +183,6 @@ class CreditsState extends MusicBeatState
 					'00FF00'
 				],
 				[
-					'Dinus Game',
-					'Dinus Game',
-					'freakyMenu Universe Engine music. Also made the design of the Fancy Main Menu',
-					'https://gamebanana.com/members/2053946',
-					'27FF27'
-				],
-				[
 					'idiotxd',
 					'idiotxd',
 					'His own freakyMenu music and Universe Banner',
