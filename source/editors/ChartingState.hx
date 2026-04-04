@@ -56,7 +56,11 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 
+#if (flixel >= "6.0.0")
+@:access(flixel.sound.FlxSound._sound)
+#else
 @:access(flixel.system.FlxSound._sound)
+#end
 @:access(openfl.media.Sound.__buffer)
 class ChartingState extends MusicBeatState
 {

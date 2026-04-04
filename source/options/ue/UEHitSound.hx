@@ -48,11 +48,13 @@ class UEHitSound extends BaseOptionsMenu
 			'Water',
 			'Waterboom',
 			'Heartbeat',
-			'Fire in the hole',
 			'Universe',
+			#if SILLY_OPTIONS
+			'Fire in the hole',
 			'Baldi',
 			'Spongefail',
 			'Spongebob'
+			#end
 		]);
 		addOption(option);
 		option.onChange = onChangeHitSound;

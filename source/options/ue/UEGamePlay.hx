@@ -46,11 +46,13 @@ class UEGamePlay extends BaseOptionsMenu
 			'Water',
 			'Waterboom',
 			'Heartbeat',
-			'Fire in the hole',
 			'Universe',
+			#if SILLY_OPTIONS
+			'Fire in the hole',
 			'Baldi',
 			'Spongefail',
 			'Spongebob'
+			#end
 		]);
 		addOption(option);
 		option.onChange = onChangeHitSound;
@@ -58,6 +60,7 @@ class UEGamePlay extends BaseOptionsMenu
 		var option:Option = new Option('Smooth HP', 'If there was any bug moving the position X health icons, turn this off!', 'sh', 'bool', true);
 		addOption(option);
 
+		#if SILLY_OPTIONS
 		var option:Option = new Option('Every 100 combo', 'If every 100 combo, it does a cool thing :D', 'ec', 'bool', true);
 		addOption(option);
 
@@ -76,6 +79,7 @@ class UEGamePlay extends BaseOptionsMenu
 
 		var option:Option = new Option('Darken CamGame', 'If checked, it darkens the camGame, so its easier to read modcharts.', 'dcm', 'bool', false);
 		addOption(option);
+		#end
 
 		var option:Option = new Option('Long note Transparency', 'How much the transparency for the long notes be.', 'longnotet', 'percent', 0.6);
 		addOption(option);

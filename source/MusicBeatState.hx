@@ -17,11 +17,11 @@ import flixel.FlxBasic;
 
 class MusicBeatState extends modchart.modcharting.ModchartMusicBeatState
 {
-	private var curSection:Int = 0;
+	public var curSection:Int = 0;
 	private var stepsToDo:Int = 0;
 
-	private var curStep:Int = 0;
-	private var curBeat:Int = 0;
+	public var curStep:Int = 0;
+	public var curBeat:Int = 0;
 
 	private var curDecStep:Float = 0;
 	private var curDecBeat:Float = 0;

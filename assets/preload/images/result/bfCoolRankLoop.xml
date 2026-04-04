@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="RESULTS_BOYFRIEND_GOOD_RANK.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="rankLoop0000" x="0" y="0" width="637" height="516" frameX="0" frameY="-2" frameWidth="638" frameHeight="518"/>
+	<SubTexture name="rankLoop0001" x="637" y="0" width="634" height="515" frameX="0" frameY="-3" frameWidth="638" frameHeight="518"/>
+	<SubTexture name="rankLoop0002" x="1271" y="0" width="638" height="515" frameX="0" frameY="-3" frameWidth="638" frameHeight="518"/>
+	<SubTexture name="rankLoop0003" x="0" y="516" width="635" height="518" frameX="0" frameY="0" frameWidth="638" frameHeight="518"/>
+</TextureAtlas>

@@ -30,9 +30,6 @@ class CoolMenuState extends MusicBeatState
 	var bg:FlxSprite;
 	var dots:FlxBackdrop;
 
-	public static var ueVersion:String = '0.5.5';
-	public static var psychEngineVersion:String = '0.6.3';
-
 	var curSelected:Int = 0;
 	var menuItems:FlxTypedGroup<MenuText>;
 	var selectedSomething:Bool = true;
@@ -168,14 +165,14 @@ class CoolMenuState extends MusicBeatState
 
 		var targetX:Float = FlxG.width / 2 + 300;
 
-		versionShitUE = new FlxText(FlxG.width + 2000, FlxG.height - 92, 0, "Universe Engine v: " + ueVersion, 12);
+		versionShitUE = new FlxText(FlxG.width + 2000, FlxG.height - 92, 0, "Solar Engine v: " + MainMenuState.ueVersion, 12);
 		versionShitUE.scrollFactor.set();
 		versionShitUE.setFormat(Paths.font('funkin.ttf'), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShitUE);
 		FlxTween.tween(versionShitUE, {x: targetX}, 2, {
 			ease: FlxEase.backOut
 		});
-		versionShitPE = new FlxText(FlxG.width + 2000, FlxG.height - 72, 0, "Psych Engine v: " + psychEngineVersion, 12);
+		versionShitPE = new FlxText(FlxG.width + 2000, FlxG.height - 72, 0, "Psych Engine v: " + MainMenuState.psychEngineVersion, 12);
 		versionShitPE.scrollFactor.set();
 		versionShitPE.setFormat(Paths.font('funkin.ttf'), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShitPE);
@@ -514,7 +511,7 @@ class CoolMenuState extends MusicBeatState
 				case 'credits':
 					LoadingState.loadAndSwitchState(new CreditsState());
 				case 'options':
-					LoadingState.loadAndSwitchState(new options.SelectThing());
+					LoadingState.loadAndSwitchState(new options.OptionsState());
 			}
 		}
 		if (curPage == "useless")

@@ -516,7 +516,7 @@ class ModsMenuState extends MusicBeatState
 			else
 			{
 				if (ClientPrefs.moveCreditMods)
-					MusicBeatState.switchState(new options.SelectThing());
+					MusicBeatState.switchState(new options.OptionsState());
 				else if (ClientPrefs.fm)
 					MusicBeatState.switchState(new CoolMenuState());
 				else

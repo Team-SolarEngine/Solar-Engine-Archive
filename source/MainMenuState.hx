@@ -29,7 +29,7 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var ueVersion:String = '0.5.5';
+	public static var ueVersion:String = '0.6.0';
 	public static var psychEngineVersion:String = '0.6.3'; // This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
@@ -242,6 +242,8 @@ class MainMenuState extends MusicBeatState
 		#end
 
 		super.create();
+
+		if (ClientPrefs.fm) FlxG.switchState(new CoolMenuState()); // fix for potentially entering the incorrect state.
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
@@ -366,7 +368,7 @@ class MainMenuState extends MusicBeatState
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':
-										LoadingState.loadAndSwitchState(new options.SelectThing());
+										LoadingState.loadAndSwitchState(new options.OptionsState());
 								}
 							});
 						}

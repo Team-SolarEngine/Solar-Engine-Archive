@@ -133,7 +133,7 @@ class UniverseOptionsMenu extends MusicBeatState
 		if (controls.BACK)
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new options.SelectThing());
+			MusicBeatState.switchState(new options.OptionsState());
 		}
 
 		if (controls.ACCEPT)

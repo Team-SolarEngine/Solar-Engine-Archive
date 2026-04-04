@@ -35,21 +35,23 @@ class UEGameOptions extends BaseOptionsMenu
 
 		var option:Option = new Option('Main Menu Music', 'Change the main menu song', 'mmm', 'string', 'Universe', [
 			'Universe',
-			'FunkinParadise',
-			"AAC V4",
+			#if SILLY_OPTIONS "AAC V4", #end
+			/* 'FunkinParadise', // Creator is potentially not a cool guy
+			// The following aren't ours in the slightest.
 			'VS Impostor V4',
 			'VS Shaggy',
 			'VS Nonsense V2',
 			'DNB Old',
 			'Stay Funky',
 			'Marked Engine',
-			'IdiotXD',
-			'Normal Collections',
+			'IdiotXD', */
+			'Normal Collections', // Can't find anything on this lmao
 			'Daveberry'
 		]);
 		addOption(option);
 		option.onChange = changeSong;
 
+		#if SILLY_OPTIONS
 		var option:Option = new Option('Fancy Title', 'Title bounce', 'ft', 'bool', false);
 		addOption(option);
 
@@ -62,6 +64,7 @@ class UEGameOptions extends BaseOptionsMenu
 		}, 'cm', 'bool', false);
 		addOption(option);
 		option.onChange = restart;
+		#end
 
 		/*
 		var option:Option = new Option('Check for Updates', 'On Release builds, turn this on to check for updates when you start the game.',
@@ -75,11 +78,13 @@ class UEGameOptions extends BaseOptionsMenu
 		var option:Option = new Option('Loading Screen', 'Loading screen!\nalso, this just does nothing lol', 'loadscreen', 'bool', false);
 		addOption(option);
 
+		#if SILLY_OPTIONS
 		var option:Option = new Option('Fancy Menus', "Makes the menus just more clean", 'fm', 'bool', true);
 		addOption(option);
 
 		var option:Option = new Option('Silly Bounce', "Makes the dots behind the main menu bounce", 'sillyBob', 'bool', true);
 		addOption(option);
+		#end
 
 		var option:Option = new Option('Disable Second Page', "Disables the second page on the main menu.", 'disable2ndpage', 'bool', false);
 		addOption(option);
@@ -87,8 +92,8 @@ class UEGameOptions extends BaseOptionsMenu
 		var option:Option = new Option('Hide Original Credits', "Hides the original credits built-in in source.", 'hideOriCredits', 'bool', false);
 		addOption(option);
 
-		var option:Option = new Option('Move Credits and Mods', "Moves the Credits and Mods to Options.", 'moveCreditMods', 'bool', false);
-		addOption(option);
+		/* var option:Option = new Option('Move Credits and Mods', "Moves the Credits and Mods to Options.", 'moveCreditMods', 'bool', false);
+		addOption(option); */
 
 		super();
 	}

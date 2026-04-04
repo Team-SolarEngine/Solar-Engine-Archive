@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Universe Engine" file="UniverseEngine" packageName="com.univere.engine" package="com.universe.engine" main="Main" version="0.2.8" company="Universe" />
+	<app title="Friday Night Funkin': Solar Engine" file="Solar" packageName="com.teamsolar.solar" package="com.teamsolar.engine" main="Main" version="0.2.8" company="Team-SolarEngine" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -51,6 +51,7 @@
 	<define name="PSYCH_WATERMARKS"/> <!-- DELETE THIS TO REMOVE WATERMARKS/DEV NAMES ON TITLE SCREEN -->
 	<define name="TITLE_SCREEN_EASTER_EGG" if="officialBuild"/> <!-- DELETE THE if="officialBuild" for enabling this on an unofficial build -->
 	<define name="CRASH_HANDLER" if="desktop release" />
+	<define name="SILLY_OPTIONS" /> <!-- Allows certain settings to be enabled. -->
 	<!-- <define name="PROMPT_LAUNCHER" /> --> <!-- Launcher is archived! -->
 
 	<define name="PSYCH" />

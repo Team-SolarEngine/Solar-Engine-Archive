@@ -122,7 +122,6 @@ class CreditsState extends MusicBeatState
 				['UE Special Thanks'],
 				['Blitz',						'Blitz',			'Universe Logo And Playtester',													'https://www.youtube.com/@fireballfurby',						'00FFFF'],
 				['An Ammar',					'Ammar',			'Hype Mode, Detached Health Bar, Playtester, Creator of the fancy main menu',	'https://gamebanana.com/mods/381804',							'00FF00'],
-				['Dinus Game',					'Dinus Game',		'freakyMenu Universe Engine music',												'https://gamebanana.com/members/2053946',						'27FF27'],
 				['idiotxd',						'idiotxd',			'His own freakyMenu music and Universe Banner',									'https://x.com/IdiottLool',										'5656FF'],
 				['JordanSantiago',				'jor',				'Most of the code of UE comes from JS',											'https://gamebanana.com/tools/13575',							'32CD32'],
 				[''],
@@ -279,7 +278,7 @@ class CreditsState extends MusicBeatState
 				}
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				if (ClientPrefs.moveCreditMods)
-					MusicBeatState.switchState(new options.SelectThing());
+					MusicBeatState.switchState(new options.OptionsState());
 				else if (ClientPrefs.fm)
 					MusicBeatState.switchState(new CoolMenuState());
 				else

@@ -1,162 +1,109 @@
-<h1 align="center">
-  <br>
-  <a href="https://github.com/VideoBotYT/Universe-Engine"><img src="assets/exclude/images/universe.png" alt="universe" width="150"></a>
-  <br>
-  <b>Universe Engine</b>
-  <br>
-</h1>
-<h3 align="center">
-  <b>Welcome to universe engine. A modified psych engine, making it a teeny tiny bit better.</b>
-</h3>
-<h4 align="center">
-  README.md Borrowed and modified from JS ENGINE
+# Note: This readme is taken from a yet to be released version of Solar Engine! I just really hate the original old readme lmao
+<div align="center"> 
+  <img src="assets/exclude/images/universe.png" height="285"> <br>
+
+  <h3>
+    <img src="art/icon64.png" width="25">
+    Solar engine - Formerly yet another <a href="https://github.com/ShadowMario/FNF-PsychEngine">Psych Engine</a> fork.
+  </h3>
   
-  https://github.com/JordanSantiagoYT/FNF-JS-Engine
+  <p>
+    <a href="https://discord.gg/RaHmP5fgyA">
+      Join The OFFICIAL Solar Engine Discord Server!
+    </a> <br>
+    <a href="https://universe-engine.netlify.app">
+      Check out the Universe Engine Website!
+    </a>
+    <br> Yes, it's still called that on the website.
+  </p>
+</div>
 
+
+---
+
+<h3> ❓ What is Solar Engine? </h3> <!-- its an engine of the Solar System.. idk man. -->
+<p>
+  Solar Engine is an engine built off of Funkin' 0.2.8 with additional useful features. <br>
+  Such as:
+  <ul>
+    <li> Modcharting Tool </li>
+    <li> Customizability </li>
+    <li> Easier Modding (hopefully) </li>
+    <li> HScript </li>
+    <li> Custom HScript States </li>
+    <li> Cleaner UI </li>
+  </ul>
+</p>
+
+---
+
+<h3> 🎯 What we aim for: </h3>
+<p>
+  Cross platform for
+  <ul>
+    <li> 🐧 Linux </li>
+    <li> 🪟 Windows </li>
+    <li> 🍎 MacOS </li>
+  </ul>
+
+  Performance for low-end devices (Hopefully on their way!)
   
-  CHANGELOG.md is now the universe engine changelog.
-</h4>
+  Provide the modders an easier way to mod. <br>
+  And give the players more customization.
+</p>
 
-# Hello!
+---
 
-Welcome to universe engine!
-probably one of the most advanced engine I've ever made lol.
+<h3> 👑 Who created and helped this engine? </h3>
+<table align="center">
+  <tr>
+    <th>Contributor Names</th>
+    <th> <img src="https://daveberry.netlify.app/otherImages/dave.png" width="25"> Daveberry   </th>
+    <th> <img src="https://github.com/VideoBotYT/Universe-Engine/blob/main/assets/preload/images/credits/videobot.png?raw=true" width="25"> VideoBot </th>
+    <th> <img src="https://github.com/VideoBotYT/Universe-Engine/blob/main/assets/preload/images/credits/baranmuzu.png?raw=true" width="25"> BaranMuzu </th>
+    <th> <img src="https://github.com/CharGoldenYT/CharGoldenYT/blob/main/cha.png?raw=true" width="25"> CharGoldenYT </th>
+  </tr>
 
-This engine includes some new features like a modcharting tool annd some other cool stuff!
-I won't go over what has been added since [Gamejolt page](https://gamejolt.com/games/universeengine/935086) already has all the features listed
+  <tr>
+    <th>Initial Role</th>
+    <th> Created the engine. </th>
+    <th> Created the engine. </th>
+    <th> Invited to help. </th>
+    <th> Invited to help. </th>
+  </tr>
 
-Heres some working libs that I use (uwenalil) that will make the engine work. (ONLY FOR COMPILING)
-* haxelib git hxcpp https://github.com/HaxeFoundation/hxcpp (FIXES NO COLOR BUG)
-* haxelib install hxCodec 2.5.1 (FIXES VIDEO CRASH)
+  <tr>
+    <th>Role</th>
+    <th> Former Developer </th>
+    <th> Lead Developer </th>
+    <th> Former Developer </th>
+    <th> Basically Lead Coder </th>
+  </tr>
 
-If you have the voices.ogg problem when compiling, open a issue and ill send my haxelib libraries.
-If you have any bugs trying to compile this engine, please do submit a Issue!
+  <tr>
+    <th> Personal Message </th>
+    <th> "I'M NOT FUCKING GAY" </th>
+    <th> "I love MODCHARTING" </th>
+    <th> "idk" </th>
+    <th> "guys I swear VS Char is coming in 2040." </th>
+  </tr>
+</table>
 
-# THANK YOU FOR USING THIS ENGINE!
-seriously, thank you, I've never made an engine this popular <3
+---
 
-# IF YOU HAVE ANY QUESTIONS/BUGS/CRASHES.
-please do post an issue! this helps us keeps bugs out in our engine!
+<h3> 🫵❓ How could YOU help? </h3>
+<p>
+  You can either:
+  <ul>
+    <li> Submit Issues with the engine </li>
+    <li> Submit Pull Requests (Bugs, QOL, etc...) </li>
+  </ul>
+</p>
 
-modcharting tool my beloved <3<3
-
-coolest thing there is in this engine.
-
-# CREDICE
-* [uwenalil](https://linktr.ee/uwenalil) -> Former dev, (No Longer) In charge of the LUA, HX files and other.
-* [VideoBot](https://linktr.ee/videobot) -> First DEV, In charge of the HX files
-* [BaranMuzu](https://www.youtube.com/@BaranMuzu) -> Second DEV, In charge of the LUA files and other
-
-### Universe Bonus Stuff
-* [Support server (also uwens discord server)](discord.gg/S7Ycgznj2Z) -> https://discord.gg/S7Ycgznj2Z
-* [OFFICIAL Universe Engine Website](https://uwenalil.netlify.app/universe%20engine/universewiki) -> https://uwenalil.netlify.app/universe%20engine/universewiki
-* [Bonus Songs (MODCHARTS)](https://github.com/uwenalil/Universe-Bonus-Songs) -> https://github.com/uwenalil/Universe-Bonus-Songs
-* [Official Launcher](https://github.com/VideoBotYT/Universe-Engine-Launhcer) -> https://github.com/VideoBotYT/Universe-Engine-Launhcer
-
-<details>
-  <summary><h2>Psych engine credits and other stuff</h2></summary>
-
-# Friday Night Funkin' - Psych Engine
-Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
-
-## Installation:
-You must have [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
-
-Follow a Friday Night Funkin' source code compilation tutorial, after this you will need to install LuaJIT.
-
-To install LuaJIT do this: `haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit` on a Command prompt/PowerShell
-
-...Or if you don't want your mod to be able to run .lua scripts, delete the "LUA_ALLOWED" line on Project.xml
-
-
-If you get an error about StatePointer when using Lua, run `haxelib remove linc_luajit` into Command Prompt/PowerShell, then re-install linc_luajit.
-
-If you want video support on your mod, simply do `haxelib install hxCodec` on a Command prompt/PowerShell
-
-otherwise, you can delete the "VIDEOS_ALLOWED" Line on Project.xml
-
-## Credits:
-* Shadow Mario - Programmer
-* RiverOaken - Artist
-* Yoshubs - Assistant Programmer
-
-### Special Thanks
-* bbpanzu - Ex-Programmer
-* shubs - New Input System
-* SqirraRNG - Crash Handler and Base code for Chart Editor's Waveform
-* KadeDev - Fixed some cool stuff on Chart Editor and other PRs
-* iFlicky - Composer of Psync and Tea Time, also made the Dialogue Sounds
-* PolybiusProxy - .MP4 Video Loader Library (hxCodec)
-* Keoiki - Note Splash Animations
-* Smokey - Sprite Atlas Support
-* Nebula the Zorua - LUA JIT Fork and some Lua reworks
-_____________________________________
-
-# Features
-
-## Attractive animated dialogue boxes:
-
-![](https://user-images.githubusercontent.com/44785097/127706669-71cd5cdb-5c2a-4ecc-871b-98a276ae8070.gif)
+<h3> ☝️❓ How can YOU join the Developer team? </h3>
+<p>
+  We are currently not hiring and probably never. <br>
+  We only invite people to join the Developer team.
+</p>
 
 
-## Mod Support
-* Probably one of the main points of this engine, you can code in .lua files outside of the source code, making your own weeks without even messing with the source!
-* Comes with a Mod Organizing/Disabling Menu.
-
-
-## Atleast one change to every week:
-### Week 1:
-  * New Dad Left sing sprite
-  * Unused stage lights are now used
-### Week 2:
-  * Both BF and Skid & Pump does "Hey!" animations
-  * Thunders does a quick light flash and zooms the camera in slightly
-  * Added a quick transition/cutscene to Monster
-### Week 3:
-  * BF does "Hey!" during Philly Nice
-  * Blammed has a cool new colors flash during that sick part of the song
-### Week 4:
-  * Better hair physics for Mom/Boyfriend (Maybe even slightly better than Week 7's :eyes:)
-  * Henchmen die during all songs. Yeah :(
-### Week 5:
-  * Bottom Boppers and GF does "Hey!" animations during Cocoa and Eggnog
-  * On Winter Horrorland, GF bops her head slower in some parts of the song.
-### Week 6:
-  * On Thorns, the HUD is hidden during the cutscene
-  * Also there's the Background girls being spooky during the "Hey!" parts of the Instrumental
-
-## Cool new Chart Editor changes and countless bug fixes
-![](https://github.com/ShadowMario/FNF-PsychEngine/blob/main/docs/img/chart.png?raw=true)
-* You can now chart "Event" notes, which are bookmarks that trigger specific actions that usually were hardcoded on the vanilla version of the game.
-* Your song's BPM can now have decimal values
-* You can manually adjust a Note's strum time if you're really going for milisecond precision
-* You can change a note's type on the Editor, it comes with two example types:
-  * Alt Animation: Forces an alt animation to play, useful for songs like Ugh/Stress
-  * Hey: Forces a "Hey" animation instead of the base Sing animation, if Boyfriend hits this note, Girlfriend will do a "Hey!" too.
-
-## Multiple editors to assist you in making your own Mod
-![Screenshot_3](https://user-images.githubusercontent.com/44785097/144629914-1fe55999-2f18-4cc1-bc70-afe616d74ae5.png)
-* Working both for Source code modding and Downloaded builds!
-
-## Story mode menu rework:
-![](https://i.imgur.com/UB2EKpV.png)
-* Added a different BG to every song (less Tutorial)
-* All menu characters are now in individual spritesheets, makes modding it easier.
-
-## Credits menu
-![Screenshot_1](https://user-images.githubusercontent.com/44785097/144632635-f263fb22-b879-4d6b-96d6-865e9562b907.png)
-* You can add a head icon, name, description and a Redirect link for when the player presses Enter while the item is currently selected.
-
-## Awards/Achievements
-* The engine comes with 16 example achievements that you can mess with and learn how it works (Check Achievements.hx and search for "checkForAchievement" on PlayState.hx)
-
-## Options menu:
-* You can change Note colors, Delay and Combo Offset, Controls and Preferences there.
- * On Preferences you can toggle Downscroll, Middlescroll, Anti-Aliasing, Framerate, Low Quality, Note Splashes, Flashing Lights, etc.
-
-## Other gameplay features:
-* When the enemy hits a note, their strum note also glows.
-* Lag doesn't impact the camera movement and player icon scaling anymore.
-* Some stuff based on Week 7's changes has been put in (Background colors on Freeplay, Note splashes)
-* You can reset your Score on Freeplay/Story Mode by pressing Reset button.
-* You can listen to a song or adjust Scroll Speed/Damage taken/etc. on Freeplay by pressing Space.

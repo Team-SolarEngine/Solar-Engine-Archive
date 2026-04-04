@@ -71,6 +71,7 @@ class UEHud extends BaseOptionsMenu
 			option.maxValue = 580;
 		}
 
+		#if SILLY_OPTIONS
 		var option:Option = new Option('Detached Health Bar', 'When Unchecked, the health bar get sets to camHUD', 'dhb', 'bool', true);
 		addOption(option);
 
@@ -85,6 +86,7 @@ class UEHud extends BaseOptionsMenu
 		
 		var option:Option = new Option('Layer HPBG Behind', 'If unchecked, The Healthbar BG Layers behind the health bar colors.', 'lhpbgb', 'bool', false);
 		addOption(option);
+		#end
 
 		super();
 	}

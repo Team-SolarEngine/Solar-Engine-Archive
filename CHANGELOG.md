@@ -1,6 +1,25 @@
 # Universe Engine Changelog.
 
-[Universe Engine 0.5.5](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.5.5)
+# [Solar Engine 0.6.0](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.6.0)
+
+> A Universe Engine update?! in 2026???!?!? No I am not going back and fixing the changelog to reflect this one frick you - Char
+
+## Changes
+
+- Note Splashes now actually exist (Psych 0.7.3 code backport lmao)
+- Fancy Menu no longer fails to load in some cases.
+- Disabling Modcharts no longer invalidates your score.
+- Removed Dinus Game from credits.
+- Removed Menu Music we likely don't have permission to use
+- Added a build flag that let's you remove certain options at compile time that may be considerd "unneccassary"
+- Made the Result Screen a seperate substate and fixed the quality of the exported animations.
+
+## Library Changes
+
+- Modern HxCodec Support.
+- Compatible with modern flixel versions
+
+# [Universe Engine 0.5.5](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.5.5)
 
 Universe engine offical launcher?!!?!?!?!??!!?!?!??!?!?! [(click here)](https://github.com/VideoBotYT/Universe-Engine-Launhcer/releases)
 
@@ -32,7 +51,7 @@ Added an option to remove second page in main menu
 
 Fixed Pause Menu music crash on psych options
 
-# NOTE FROM THE (FORMER)FIRST DEVELOPER
+## NOTE FROM THE (FORMER)FIRST DEVELOPER
 
 Hey uh, Yeah hi, I'm uwenalil, I'm the one who made this update and so now, I don't work for universe engine anymore.
 
@@ -44,19 +63,17 @@ Thank you for your support.
 
 See you.
 
-#
-
-[Universe Engone 0.4.5](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.4.5)
+# [Universe Engone 0.4.5](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.4.5)
 
 Bugfixes
 
 windowSize now doesn't have 2 arguments that did the same _previously the sizeX and sizeY did the same_
 
-windowSize now also has 2 extra functions _for the X and the Y sepreratly_ read [wiki](https://github.com/VideoBotYT/Universe-Engine/wiki) for more information
+windowSize now also has 2 extra functions _for the X and the Y sepreratly_ read [wiki](https://github.com/Team-SolarEngine/Universe-Engine-Archive/wiki) for more information
 
-windowPos now also has 2 extra function _like windowSize_  read [wiki](https://github.com/VideoBotYT/Universe-Engine/wiki) for more information
+windowPos now also has 2 extra function _like windowSize_  read [wiki](https://github.com/Team-SolarEngine/Universe-Engine-Archive/wiki) for more information
 
-[Universe Engine 0.4.4](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.4.4)
+# [Universe Engine 0.4.4](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.4.4)
 
 New features
 
@@ -66,9 +83,9 @@ Silly Bounce (game option *only effects when you have Fancy Menus on)
 
 New modifiers
 
-New lua functions (check [wiki](https://github.com/VideoBotYT/Universe-Engine/wiki) for it)
+New lua functions (check [wiki](https://github.com/Team-SolarEngine/Universe-Engine-Archive/wiki) for it)
 
-[Universe Engine 0.3.4](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.3.4)
+# [Universe Engine 0.3.4](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.3.4)
 
 Minor bugfix stuff
 
@@ -89,7 +106,7 @@ Removed window icon for fire in the hole hitsound. (I didn't have enough time to
 Loading screen! (can disable)
 
 
-[Universe Engine 0.3.3](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.3.3)
+# [Universe Engine 0.3.3](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.3.3)
 
 <-- UWENALIL -->
 
@@ -172,9 +189,9 @@ Erect menu
 
 <-- PULL REQUESTS -->
 
-https://github.com/VideoBotYT/Universe-Engine/pull/8 -- CharGoldenYT
+https://github.com/Team-SolarEngine/Universe-Engine-Archive/pull/8 -- CharGoldenYT
 
-[Universe Engine 0.2.2](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.2.2)
+# [Universe Engine 0.2.2](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.2.2)
 
 
 New events
@@ -196,7 +213,7 @@ Chart editor
     Reset button for playback rate
 
 
-[Universe Engine 0.2.1](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.2.1)
+# [Universe Engine 0.2.1](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.2.1)
 
 
 Fixed the HUD tag so it doesn't conflict with any other script that uses the tag.
@@ -257,7 +274,7 @@ New freakyMenu Music.
 Bonus Songs are now in a different download.
 
 
-[Universe Engine 0.1.0](https://github.com/VideoBotYT/Universe-Engine/releases/tag/0.1.0)
+# [Universe Engine 0.1.0](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.1.0)
 
 First release with terrible features.
 

@@ -1,5 +1,6 @@
 package;
 
+import objects.uehud.IconBop;
 import flixel.graphics.FlxGraphic;
 #if desktop
 import Discord.DiscordClient;
@@ -356,8 +357,15 @@ class PlayState extends MusicBeatState
 
 	public static var playerIsCheating:Bool = false;
 
+	public var iconBop:IconBop;
+
 	override public function create()
 	{
+		if (ClientPrefs.ib)
+		{
+			iconBop = new IconBop(0,0,this);
+			add(iconBop);
+		}
 		// trace('Playback Rate: ' + playbackRate);
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
@@ -1141,7 +1149,7 @@ class PlayState extends MusicBeatState
 			timeTxt.y += 3;
 		}
 
-		var splash:NoteSplash = new NoteSplash(100, 100, 0);
+		var splash:NoteSplash = new NoteSplash(100, 100);
 		grpNoteSplashes.add(splash);
 		splash.alpha = 0.0;
 
@@ -1160,8 +1168,8 @@ class PlayState extends MusicBeatState
 			playfieldRenderer = new PlayfieldRenderer(strumLineNotes, notes, this);
 			playfieldRenderer.cameras = [camHUD];
 			add(playfieldRenderer);
-			add(grpNoteSplashes);
 		}
+		add(grpNoteSplashes);
 
 		camFollow = new FlxPoint();
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -2506,7 +2514,7 @@ class PlayState extends MusicBeatState
 			+ ratingName
 			+ (ratingName != '?' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : '');
 
-		if (ClientPrefs.scoreZoom && !miss && !cpuControlled && ClientPrefs.gameplaySettings.get('modchart'))
+		if (ClientPrefs.scoreZoom && !miss && !cpuControlled)
 		{
 			if (scoreTxtTween != null)
 			{
@@ -2608,6 +2616,7 @@ class PlayState extends MusicBeatState
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
+		if (iconBop != null) iconBop.onSongStart();
 	}
 
 	var debugNum:Int = 0;
@@ -3043,6 +3052,7 @@ class PlayState extends MusicBeatState
 			}
 			paused = false;
 			callOnLuas('onResume', []);
+			if (iconBop != null) iconBop.onResume();
 
 			#if desktop
 			if (startTimer != null && startTimer.finished)
@@ -3321,6 +3331,7 @@ class PlayState extends MusicBeatState
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
 			var ret:Dynamic = callOnLuas('onPause', [], false);
+			if (iconBop != null) iconBop.onPause();
 			if (ret != FunkinLua.Function_Stop)
 			{
 				openPauseMenu();
@@ -4329,9 +4340,16 @@ class PlayState extends MusicBeatState
 	}
 
 	public var transitioning = false;
+	public var seenResults:Bool = false;
 
 	public function endSong():Void
 	{
+		if (ClientPrefs.ueresultscreen && !seenResults)
+		{
+			seenResults = true; 
+			openSubState(new ResultScreenSubState());
+			return;
+		}
 		// Should kill you if you tried to cheat
 		if (!startingSong)
 		{
@@ -4367,6 +4385,7 @@ class PlayState extends MusicBeatState
 
 		deathCounter = 0;
 		seenCutscene = false;
+		seenResults = false;
 
 		#if ACHIEVEMENTS_ALLOWED
 		if (achievementObj != null)
@@ -4605,12 +4624,12 @@ class PlayState extends MusicBeatState
 		note.rating = daRating.name;
 		score = daRating.score;
 
-		/*if (daRating.noteSplash && !note.noteSplashDisabled)
+		if (daRating.noteSplash && !note.noteSplashDisabled)
 			{
 				spawnNoteSplashOnNote(note);
-		}*/
+		}
 
-		if (!practiceMode && !cpuControlled && ClientPrefs.gameplaySettings.get('modchart'))
+		if (!practiceMode && !cpuControlled)
 		{
 			songScore += score;
 			if (!note.ratingDisabled)
@@ -5196,10 +5215,10 @@ class PlayState extends MusicBeatState
 			if (note.hitCausesMiss)
 			{
 				noteMiss(note);
-				/*if (!note.noteSplashDisabled && !note.isSustainNote)
+				if (!note.noteSplashDisabled && !note.isSustainNote)
 					{
 						spawnNoteSplashOnNote(note);
-				}*/
+				}
 
 				if (!note.noMissAnimation)
 				{
@@ -5303,45 +5322,28 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	/*public function spawnNoteSplashOnNote(note:Note)
-									{
-										if (ClientPrefs.noteSplashes && note != null)
-										{
-											var strum:StrumNote = playerStrums.members[note.noteData];
-											if (strum != null)
-											{
-												spawnNoteSplash(strum.x, strum.y, note.noteData, note);
-											}
-										}
-									}
+	public function spawnNoteSplashOnNote(note:Note)
+	{
+		if (ClientPrefs.noteSplashes && note != null)
+			{
+				var strum:StrumNote = playerStrums.members[note.noteData];
+				if (strum != null)
+				{
+					spawnNoteSplash(strum.x, strum.y, note.noteData, note);
+				}
+				}
+	}
 	
-									public function spawnNoteSplash(x:Float, y:Float, data:Int, ?note:Note = null)
-									{
-										var skin:String = 'noteSplashes';
-										if (PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0)
-											skin = PlayState.SONG.splashSkin;
-	
-										var hue:Float = 0;
-										var sat:Float = 0;
-										var brt:Float = 0;
-										if (data > -1 && data < ClientPrefs.arrowHSV.length)
-										{
-											hue = ClientPrefs.arrowHSV[data][0] / 360;
-											sat = ClientPrefs.arrowHSV[data][1] / 100;
-											brt = ClientPrefs.arrowHSV[data][2] / 100;
-											if (note != null)
-											{
-												skin = note.noteSplashTexture;
-												hue = note.noteSplashHue;
-												sat = note.noteSplashSat;
-												brt = note.noteSplashBrt;
-											}
-										}
-	
-										var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
-										splash.setupNoteSplash(x, y, data, skin, hue, sat, brt);
-										grpNoteSplashes.add(splash);
-	}*/
+	public function spawnNoteSplash(x:Float, y:Float, data:Int, ?note:Note = null)
+	{
+		var skin:String = 'noteSplashes';
+		if (PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0)
+			skin = PlayState.SONG.splashSkin;
+		
+		var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
+		splash.setupNoteSplash(x, y, data, note, skin);
+		grpNoteSplashes.add(splash);
+	}
 	var fastCarCanDrive:Bool = true;
 
 	function resetFastCar():Void
@@ -5603,11 +5605,18 @@ class PlayState extends MusicBeatState
 			notes.sort(FlxSort.byY, ClientPrefs.downScroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
 		}
 
-		iconP1.scale.set(1.2, 1.2);
-		iconP2.scale.set(1.2, 1.2);
+		if (!ClientPrefs.ib)
+		{
+			iconP1.scale.set(1.2, 1.2);
+			iconP2.scale.set(1.2, 1.2);
 
-		iconP1.updateHitbox();
-		iconP2.updateHitbox();
+			iconP1.updateHitbox();
+			iconP2.updateHitbox();
+		}
+		else
+		{
+			iconBop.onBeatHit();
+		}
 
 		if (gf != null
 			&& curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0

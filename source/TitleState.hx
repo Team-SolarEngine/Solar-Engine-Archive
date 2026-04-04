@@ -128,8 +128,6 @@ class TitleState extends MusicBeatState
 		FlxG.sound.volumeUpKeys = volumeUpKeys;
 		FlxG.keys.preventDefaultKeys = [TAB];
 
-		PlayerSettings.init();
-
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 		unWackyourwacky = FlxG.random.getObject(getUETextShit());
 
@@ -137,10 +135,6 @@ class TitleState extends MusicBeatState
 
 		swagShader = new ColorSwap();
 		super.create();
-
-		FlxG.save.bind('funkin', 'universe');
-
-		ClientPrefs.loadPrefs();
 
 		Highscore.load();
 
@@ -205,28 +199,26 @@ class TitleState extends MusicBeatState
 			MusicBeatState.switchState(new OfficialLauncherState()); // comment this line if you wanna remove the officiallauncherstate!
 		}
 		#end
+
+		#if desktop
+		if (!DiscordClient.isInitialized)
+		{
+			DiscordClient.initialize();
+			Application.current.onExit.add(function(exitCode)
+			{
+				DiscordClient.shutdown();
+			});
+		}
+		#end
+
+		if (initialized)
+			startIntro();
 		else
 		{
-			#if desktop
-			if (!DiscordClient.isInitialized)
+			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				DiscordClient.initialize();
-				Application.current.onExit.add(function(exitCode)
-				{
-					DiscordClient.shutdown();
-				});
-			}
-			#end
-
-			if (initialized)
 				startIntro();
-			else
-			{
-				new FlxTimer().start(1, function(tmr:FlxTimer)
-				{
-					startIntro();
-				});
-			}
+			});
 		}
 	}
 

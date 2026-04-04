@@ -109,7 +109,6 @@ class GameplayChangersSubstate extends MusicBeatSubstate
 		optionsArray.push(option);
 
 		var option:GameplayOption = new GameplayOption('Modchart', 'modchart', 'bool', true);
-		option.onChange = onChangeCheat;
 		optionsArray.push(option);
 
 		var option:GameplayOption = new GameplayOption('Play Both Sides', 'pbs', 'bool', false);

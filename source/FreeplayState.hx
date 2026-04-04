@@ -328,7 +328,7 @@ class FreeplayState extends MusicBeatState
 		if (FlxG.keys.pressed.SHIFT)
 			shiftMult = 3;
 
-		if (bot || practice || !modchart)
+		if (bot || practice)
 		{
 			FlxTween.tween(cheatText, {alpha: 1}, 1);
 		}
