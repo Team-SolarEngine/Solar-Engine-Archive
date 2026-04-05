@@ -20,13 +20,13 @@ function onCreatePost()
         setPropertyFromClass("openfl.Lib", "application.window.title", "FIRE IN THE HOLE")
     end
     if getPropertyFromClass("ClientPrefs", "hitsoundVolume") == 0 then
-        setPropertyFromClass("openfl.Lib", "application.window.title", "Friday Night Funkin': Universe Engine")
+        setPropertyFromClass("openfl.Lib", "application.window.title", "Friday Night Funkin': Solar Engine")
     end
 end
 
 function onDestroy()
     if UEhitsound == 'Fire in the hole' then
-        setPropertyFromClass("openfl.Lib", "application.window.title", "Friday Night Funkin': Universe Engine")
+        setPropertyFromClass("openfl.Lib", "application.window.title", "Friday Night Funkin': Solar Engine")
     end
 end
 

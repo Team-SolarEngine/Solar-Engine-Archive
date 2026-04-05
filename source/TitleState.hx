@@ -816,7 +816,7 @@ class TitleState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music("freakyMenu-" + ClientPrefs.mmm), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
 					case 2:
-						createCoolText(['Universe Engine'], 15);
+						createCoolText(['Solar Engine'], 15);
 					// credTextShit.visible = true;
 					case 3:
 						addMoreText('By', 15);
@@ -884,7 +884,7 @@ class TitleState extends MusicBeatState
 						// FlxG.sound.music.stop();
 						FlxG.sound.playMusic(Paths.music("freakyMenu-" + ClientPrefs.mmm), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
-						createCoolText(['Universe Engine'], 15);
+						createCoolText(['Solar Engine'], 15);
 						addMoreText('By', 15);
 						addMoreText('uwenalil', 15);
 						addMoreText('VideoBot', 15);

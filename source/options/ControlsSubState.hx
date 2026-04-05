@@ -65,7 +65,7 @@ class ControlsSubState extends MusicBeatSubstate
 		['Key 1', 'debug_1'],
 		['Key 2', 'debug_2'],
 		[''],
-		['Universe Engine'],
+		['Solar Engine'],
 		['Key 3', 'debug_3'],
 		['Restart', 'is']
 	];

@@ -187,7 +187,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 92, 0, "Universe Engine v: " + ueVersion, 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 92, 0, "Solar Engine v: " + ueVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat(Paths.font('funkin.ttf'), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);

@@ -222,7 +222,7 @@ class FunkinLua
 		set('currentModDirectory', Paths.currentModDirectory);
 
 		// UE optiosn
-		set('universeEngine', ClientPrefs.universeEngineCPREF); // this is to check if you running universe engine!
+		set('universeEngine', ClientPrefs.universeEngineCPREF); // this is to check if you running solar engine!
 		set('UEkeystrokes', ClientPrefs.keystrokes);
 		set('UEkeyA', ClientPrefs.keyA);
 		set('UEkeyFT', ClientPrefs.keyFT);

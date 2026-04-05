@@ -31,12 +31,12 @@ class OfficialLauncherState extends MusicBeatState
 
 		warnText = new FlxText(0, 0, FlxG.width,
 			"Hey there mate!
-			Universe Engine has an official launcher now!
-			Head over to the Universe Engine github repo
+			Solar Engine has an official launcher now!
+			Head over to the UniveSolarrse Engine github repo
 			And scroll down until you see 'Official Launcher'!
 			Or press enter to be directed!
 			
-			Thank you for using Universe Engine!",
+			Thank you for using Solar Engine!",
 			32);
 		warnText.setFormat(Paths.font('funkin.ttf'), 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);

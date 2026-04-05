@@ -45,7 +45,7 @@ class DiscordClient
 			details: "In the Intro",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "Universe Engine"
+			largeImageText: "Solar Engine"
 		});
 	}
 

@@ -39,7 +39,7 @@ class ClientPrefs
 	public static var splashAlpha:Float = 0.6;
 
 	// UE
-	public static var universeEngineCPREF:Bool = true; // this is to check if you running universe engine!
+	public static var universeEngineCPREF:Bool = true; // this is to check if you running solar engine!
 	public static var keystrokes:Bool = true;
 	public static var keyA:Float = 0.3;
 	public static var keyFT:Float = 0.15;

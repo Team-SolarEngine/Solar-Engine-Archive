@@ -32,7 +32,7 @@ class UEHud extends BaseOptionsMenu
 		title = 'Universe HUD';
 		rpcTitle = 'HUD options of the engine'; // for Discord Rich Presence
 
-		var option:Option = new Option('Universe Engine HUD', "If unchecked, it just goes back to scoreTxt, what more is there to explain? ", 'ueHud', 'bool',
+		var option:Option = new Option('Solar Engine HUD', "If unchecked, it just goes back to scoreTxt, what more is there to explain? ", 'ueHud', 'bool',
 			true);
 		addOption(option);
 

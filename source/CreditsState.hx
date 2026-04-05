@@ -104,7 +104,7 @@ class CreditsState extends MusicBeatState
 		{
 			pisspoop = [
 				// Name - Icon name - Description - Link - BG Color
-				['Universe Engine DEVs'],
+				['Solar Engine DEVs'],
 				['Video Bot',					'videobot',			'First DEV, In charge of the HX files',											'https://linktr.ee/videobot',									'14FFFF'],
 				['BaranMuzu',					'baranmuzu',		'Second DEV, In charge of the LUA files and other',								'https://linktr.ee/baranmuzu',									'BE9877'],
 				[''],
