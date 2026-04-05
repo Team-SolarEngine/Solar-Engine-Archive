@@ -3142,6 +3142,13 @@ class PlayState extends MusicBeatState
 			{
 				iconP1.swapOldIcon();
 		}*/
+		if (ClientPrefs.ueresultscreen && seenResults)
+		{
+			if (controls.ACCEPT)
+			{
+				endSong(); // just in case.
+			}
+		}
 		callOnLuas('onUpdate', [elapsed]);
 
 		switch (curStage)
@@ -4347,6 +4354,7 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.ueresultscreen && !seenResults)
 		{
 			seenResults = true; 
+			inCutscene = true;
 			openSubState(new ResultScreenSubState());
 			return;
 		}

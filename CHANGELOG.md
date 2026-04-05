@@ -1,5 +1,13 @@
 # Universe Engine Changelog.
 
+# [Solar Engine 0.6.1](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.6.1)
+
+## Changes
+
+- Fixed the result screen accidentally making a camera that becomes the default draw target.
+- Fixed the result screen occasionally failing to end the song.
+- Fixed the HXCPP version used when compiling the windows build.
+
 # [Solar Engine 0.6.0](https://github.com/Team-SolarEngine/Universe-Engine-Archive/releases/tag/0.6.0)
 
 > A Universe Engine update?! in 2026???!?!? No I am not going back and fixing the changelog to reflect this one frick you - Char

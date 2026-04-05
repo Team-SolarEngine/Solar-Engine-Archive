@@ -27,7 +27,7 @@ class ResultScreenSubState extends MusicBeatSubstate
 
         camResults = new FlxCamera();
         camResults.bgColor.alpha = 0;
-        FlxG.cameras.add(camResults);
+        FlxG.cameras.add(camResults, false);
 
         this.cameras = [camResults];
         hsStuff = {
@@ -121,6 +121,7 @@ class ResultScreenSubState extends MusicBeatSubstate
 
     function calcRating():Float
     {
+        if (hsStuff.totalPlayed == 0) return 100;
         var accuracy = (hsStuff.sicks + hsStuff.goods) / hsStuff.totalPlayed;
         
         return Math.floor(Math.floor((accuracy * 100) * 100) / 100);

@@ -33,10 +33,7 @@ class InitState extends FlxState
 
     public static function validateTitle()
     {
-        if (!Std.isOfType(FlxG.state, PlayState))
-        {
-            if (Application.current.window.title.trim().endsWith("Universe Engine")) Application.current.window.title = "Friday Night Funkin: Solar Engine"; // fix for scripts that are before this update.
-        }
+        if (Application.current.window.title.trim().endsWith("Universe Engine")) Application.current.window.title = "Friday Night Funkin: Solar Engine"; // fix for scripts that are before this update.
     }
 
     public static function validateSettings()
