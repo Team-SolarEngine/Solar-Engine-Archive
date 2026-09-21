@@ -61,8 +61,8 @@
   <tr>
     <th>Contributor Names</th>
     <th> <img src="https://codedave.pages.dev/assets/images/Daveberry%20Wave.png" width="25"> Daveberry   </th>
-    <th> <img src="https://github.com/Team-SolarEngine/Universe-Engine/blob/main/assets/preload/images/credits/videobot.png?raw=true" width="25"> VideoBot </th>
-    <th> <img src="https://github.com/Team-SolarEngine/Universe-Engine/blob/main/assets/preload/images/credits/baranmuzu.png?raw=true" width="25"> BaranMuzu </th>
+    <th> <img src="https://github.com/Team-SolarEngine/UniverseEngine-ArchivedBuild/blob/main/assets/preload/images/credits/videobot.png?raw=true" width="25"> VideoBot </th>
+    <th> <img src="https://github.com/Team-SolarEngine/UniverseEngine-ArchivedBuild/blob/main/assets/preload/images/credits/baranmuzu.png?raw=true" width="25"> BaranMuzu </th>
     <th> <img src="https://github.com/CharGoldenYT/CharGoldenYT/blob/main/cha.png?raw=true" width="25"> CharGoldenYT </th>
   </tr>
 
