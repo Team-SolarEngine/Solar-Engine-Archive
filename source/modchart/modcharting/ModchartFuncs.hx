@@ -8,6 +8,7 @@ import llua.Lua;
 import llua.LuaL;
 import llua.State;
 import llua.Convert;
+import psychlua.FunkinLua;
 #end
 
 #if LEATHER

@@ -67,15 +67,16 @@ import objects.StrumNote;
 #end
 import backend.Song;
 #else
-import Section.SwagSection;
-import Song;
-import MusicBeatSubstate;
+import backend.Section.SwagSection;
+import backend.Song;
+import backend.MusicBeatSubstate;
 #end
 import modcharting.*;
 import modchart.modcharting.PlayfieldRenderer.StrumNoteType;
 import modchart.modcharting.Modifier;
 import modchart.modcharting.ModchartFile;
 import modchart.modcharting.info.InfoText;
+import states.TitleState;
 
 using StringTools;
 
@@ -1439,7 +1440,7 @@ class ModchartEditorState extends #if SCEModchartingTools states.MusicBeatState 
 				swagNote.gfNote = (section.gfSection && (songNotes[1] < 4));
 				swagNote.noteType = songNotes[3];
 				if (!Std.isOfType(songNotes[3], String))
-					swagNote.noteType = editors.ChartingState.noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
+					swagNote.noteType = states.editors.ChartingState.noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
 				#elseif LEATHER
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, false, 0, songNotes[4], null, [0], gottaHitNote);
 				swagNote.sustainLength = songNotes[2];

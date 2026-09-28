@@ -7,8 +7,8 @@ import game.Note;
 import states.PlayState;
 import objects.Note;
 #else
-import PlayState;
-import Note;
+import states.PlayState;
+import objects.Note;
 #end
 
 using StringTools;

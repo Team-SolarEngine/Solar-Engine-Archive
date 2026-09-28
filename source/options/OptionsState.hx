@@ -1,8 +1,5 @@
 package options;
 
-#if desktop
-import Discord.DiscordClient;
-#end
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -23,7 +20,6 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
-import Controls;
 import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
 
@@ -162,7 +158,7 @@ class OptionsState extends MusicBeatState
 				}
 				else
 				{
-					MusicBeatState.switchState(new MainMenuState());
+					MusicBeatState.switchState(new states.MainMenuState());
 				}
 		}
 

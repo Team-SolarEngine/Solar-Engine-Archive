@@ -14,13 +14,13 @@ import utilities.CoolUtil;
 import states.PlayState;
 import objects.Note;
 #else
-import PlayState;
-import Note;
+import states.PlayState;
+import objects.Note;
 #end
 import lime.math.Vector4;
 import haxe.ds.List;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import Paths;
+import backend.Paths;
 
 enum ModifierType
 {

@@ -1,15 +1,15 @@
 package;
 
-import fps.FPSTicker;
-import fps.FancyFPS.FancyFPSDisplay as FancyFPS;
-import fps.FPSExtended;
+import backend.fps.FPSTicker;
+import backend.fps.FancyFPS.FancyFPSDisplay as FancyFPS;
+import backend.fps.FPSExtended;
 import flixel.graphics.FlxGraphic;
 import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.Assets;
 import openfl.Lib;
-import fps.FPSExtended as FPS;
+import backend.fps.FPSExtended as FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.display.StageScaleMode;
@@ -20,7 +20,7 @@ import lime.app.Application;
 import openfl.events.UncaughtErrorEvent;
 import haxe.CallStack;
 import haxe.io.Path;
-import Discord.DiscordClient;
+import backend.Discord.DiscordClient;
 import sys.FileSystem;
 import sys.io.File;
 import sys.io.Process;
@@ -38,7 +38,7 @@ class Main extends Sprite
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
 	public static var fpsVar:FPS;
-	public static var fpsVar2:FancyFPS;
+	// public static var fpsVar2:FancyFPS;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -99,14 +99,14 @@ class Main extends Sprite
 			fpsVar.updateBox();
 		});
 		fpsVar = new FPS(10, 3);
-		fpsVar2 = new FancyFPS(10, 3);
+		//fpsVar2 = new FancyFPS(10, 3);
 		addChild(fpsVar);
-		addChild(fpsVar2);
+		//addChild(fpsVar2);
 		Lib.current.stage.align = "tl";
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 		if(fpsVar != null) {
-			fpsVar.visible = ClientPrefs.data.showFPS;
-			fpsVar2.visible = ClientPrefs.data.fancyDisplay;
+			fpsVar.visible = ClientPrefs.data.showFPS || ClientPrefs.data.fancyDisplay;
+			//fpsVar2.visible = ClientPrefs.data.fancyDisplay;
 		}
 		addChild(new FPSTicker());
 		#end

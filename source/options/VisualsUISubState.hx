@@ -1,8 +1,5 @@
 package options;
 
-#if desktop
-import Discord.DiscordClient;
-#end
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -23,7 +20,8 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
-import Controls;
+import states.TitleState;
+import states.FreeplayState;
 
 using StringTools;
 
@@ -327,8 +325,8 @@ class VisualsUISubState extends BaseOptionsMenu
 	{
 		if (Main.fpsVar != null)
 		{
-			Main.fpsVar.visible = ClientPrefs.data.showFPS;
-			Main.fpsVar2.visible = ClientPrefs.data.fancyDisplay;
+			Main.fpsVar.visible = ClientPrefs.data.showFPS || ClientPrefs.data.fancyDisplay;
+			//Main.fpsVar2.visible = ClientPrefs.data.fancyDisplay;
 		}
 	}
 	#end

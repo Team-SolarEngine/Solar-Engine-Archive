@@ -32,9 +32,9 @@ import states.PlayState;
 import objects.Note;
 import objects.StrumNote;
 #else
-import PlayState;
-import Note;
-import StrumNote;
+import states.PlayState;
+import objects.Note;
+import objects.StrumNote;
 #end
 
 using StringTools;

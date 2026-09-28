@@ -1,5 +1,7 @@
 package objects.uehud;
 
+import states.PlayState;
+
 class BaseScript extends FlxObject
 {
     var game:PlayState;

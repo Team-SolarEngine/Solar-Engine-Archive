@@ -23,6 +23,7 @@ import hscript.*;
 #if (HSCRIPT_ALLOWED && PSYCH && PSYCHVERSION >= "0.7")
 import psychlua.HScript as FunkinHScript;
 #end
+import shaders.ColorSwap;
 using StringTools;
 
 typedef ModchartJson = 

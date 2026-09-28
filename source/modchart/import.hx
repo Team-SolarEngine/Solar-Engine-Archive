@@ -35,9 +35,9 @@ import objects.StrumNote;
 #end
 import backend.Song;
 #else
-import Section.SwagSection;
-import Song;
-import MusicBeatSubstate;
+import backend.Section.SwagSection;
+import backend.Song;
+import backend.MusicBeatSubstate;
 #end
 
 #if (PSYCH && PSYCHVERSION >= "0.7")

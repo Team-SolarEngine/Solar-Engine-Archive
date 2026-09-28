@@ -20,8 +20,6 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
-import MusicBeatState;
-import Controls;
 import lime.app.Application;
 
 using StringTools;

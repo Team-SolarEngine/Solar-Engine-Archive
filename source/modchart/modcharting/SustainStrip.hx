@@ -7,7 +7,7 @@ import game.Note;
 #elseif (PSYCH && PSYCHVERSION >= "0.7")
 import objects.Note;
 #else
-import Note;
+import objects.Note;
 #end
 import flixel.FlxStrip;
 
