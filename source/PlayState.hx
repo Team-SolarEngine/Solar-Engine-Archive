@@ -5594,6 +5594,17 @@ class PlayState extends MusicBeatState
 		callOnLuas('onStepHit', []);
 	}
 
+	override function deltaUpdate(deltaTime:Float) {
+		super.deltaUpdate(deltaTime);
+
+		setOnLuas("deltaTime", deltaTime);
+		callOnLuas("onUpdateDelta", []);
+		// Add any code AFTER this line
+		
+		// Add any code BEFORE this line
+		callOnLuas("onUpdatePostDelta", []);
+	}
+
 	var lightningStrikeBeat:Int = 0;
 	var lightningOffset:Int = 8;
 	var lastBeatHit:Int = -1;

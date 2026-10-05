@@ -41,7 +41,11 @@ class MusicBeatState extends modchart.modcharting.ModchartMusicBeatState
 			openSubState(new CustomFadeTransition(0.7, true));
 		}
 		FlxTransitionableState.skipNextTransOut = false;
+
+		Main.onFrameUpdate.add(deltaUpdate);
 	}
+
+	function deltaUpdate(deltaTime:Float) {}
 
 	override function update(elapsed:Float)
 	{
