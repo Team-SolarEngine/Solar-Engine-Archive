@@ -26,6 +26,24 @@ import sys.io.Process;
 
 using StringTools;
 
+class DT extends Sprite 
+{
+	public function new()
+	{
+		super();
+		
+		#if flash
+		addEventListener(Event.ENTER_FRAME, function(e)
+		{
+			var time = Lib.getTimer();
+			__enterFrame(time - currentTime);
+		});
+		#end
+	}
+
+	private #if !flash override #end function __enterFrame(deltaTime:Float):Void Main.onFrameUpdate.dispatch(deltaTime);
+}
+
 class Main extends Sprite
 {
 	var gameWidth:Int = 1280; // Width of the game in pixels (might be less / more in actual pixels depending on your zoom).
@@ -36,6 +54,13 @@ class Main extends Sprite
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
 	public static var fpsVar:FPS;
+
+	/**
+	 * the float in this case is the delta time.
+	 */
+	public static var onFrameUpdate(default, null):FlxTypedSignal<Float->Void> = new FlxTypedSignal();
+
+	public static var deltaTime:Float = 0;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -95,6 +120,8 @@ class Main extends Sprite
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
 		#end
+		addChild(new DT());
+		onFrameUpdate.add((v)->deltaTime = v);
 
 		#if html5
 		FlxG.autoPause = false;
