@@ -1,5 +1,6 @@
 package;
 
+import flixel.util.FlxSignal.FlxTypedSignal;
 import sys.TempStateData;
 import flixel.graphics.FlxGraphic;
 import flixel.FlxG;
@@ -11,6 +12,8 @@ import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.display.StageScaleMode;
+
+import thx.semver.Version;
 
 //crash handler stuff
 #if CRASH_HANDLER
@@ -46,6 +49,7 @@ class DT extends Sprite
 
 class Main extends Sprite
 {
+	public static var engineVersion:Version = ([0,6,1] : Version).withBuild("build2");
 	var gameWidth:Int = 1280; // Width of the game in pixels (might be less / more in actual pixels depending on your zoom).
 	var gameHeight:Int = 720; // Height of the game in pixels (might be less / more in actual pixels depending on your zoom).
 	var initialState:Class<FlxState> = InitState; // The FlxState the game starts with.
@@ -63,6 +67,11 @@ class Main extends Sprite
 	public static var deltaTime:Float = 0;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
+
+	public static function verString():String
+	{
+		return engineVersion.toString();
+	}
 
 	public static function main():Void
 	{
