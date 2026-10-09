@@ -63,7 +63,7 @@ class Main extends Sprite
 	 * the float in this case is the delta time.
 	 */
 	public static var onFrameUpdate(default, null):FlxTypedSignal<Float->Void> = new FlxTypedSignal();
-
+	public static var trackedVersions:Map<String, Version> = [];
 	public static var deltaTime:Float = 0;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.

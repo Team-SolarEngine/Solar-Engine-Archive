@@ -5600,7 +5600,20 @@ class PlayState extends MusicBeatState
 		setOnLuas("deltaTime", deltaTime);
 		callOnLuas("onUpdateDelta", []);
 		// Add any code AFTER this line
-		
+		if (deltaTime / 1000 > 1) // over 1 second of frame time is bad, send that shit back.
+		{
+			trace(deltaTime / 1000);
+			var calc = FlxStringUtil.formatTime((FlxG.sound.music.time - (deltaTime + 250)) / 1000, true);
+			trace('Old pos: ${FlxStringUtil.formatTime(FlxG.sound.music.time / 1000, true)} | new Pos: $calc');
+
+			if (!startingSong)
+			{
+				FlxG.sound.music.pause();
+				FlxG.sound.music.time = FlxG.sound.music.time - (deltaTime + 250);
+				FlxG.sound.music.play();
+				resyncVocals();
+			}
+		}
 		// Add any code BEFORE this line
 		callOnLuas("onUpdatePostDelta", []);
 	}

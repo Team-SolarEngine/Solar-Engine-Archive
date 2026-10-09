@@ -49,6 +49,7 @@ import hscript.Parser;
 import hscript.Interp;
 import hscript.Expr;
 #end
+import thx.semver.Version;
 #if desktop
 import Discord;
 import Discord.DiscordClient;
@@ -278,6 +279,44 @@ class FunkinLua
 		#else
 		set('buildTarget', 'unknown');
 		#end
+
+		// Semver
+		Lua_helper.add_callback(lua, "newSemVer", function(tag:String, semVer:Dynamic, ?pre:String, ?build:String){
+			var ver:Version = (semVer : Version);
+			if (pre != null) ver = ver.withPre(pre, build);
+			if (pre == null && build != null) ver = ver.withBuild(build);
+
+			Main.trackedVersions.set(tag, ver);
+		});
+		Lua_helper.add_callback(lua, "semver_greaterThan", function(tag1:String, tag2:String)
+		{
+			var ver1:Version = cast Main.trackedVersions.get(tag1);
+			var ver2:Version = cast Main.trackedVersions.get(tag2);
+
+			return ver1.greaterThan(ver2);
+		});
+		Lua_helper.add_callback(lua, "semver_greaterThanOrEqual", function(tag1:String, tag2:String)
+		{
+			var ver1:Version = cast Main.trackedVersions.get(tag1);
+			var ver2:Version = cast Main.trackedVersions.get(tag2);
+
+			return ver1.greaterThanOrEqual(ver2);
+		});
+		Lua_helper.add_callback(lua, "semver_lesserThan", function(tag1:String, tag2:String)
+		{
+			var ver1:Version = cast Main.trackedVersions.get(tag1);
+			var ver2:Version = cast Main.trackedVersions.get(tag2);
+
+			return ver1.lessThan(ver2);
+		});
+		Lua_helper.add_callback(lua, "semver_lesserThanOrEqual", function(tag1:String, tag2:String)
+		{
+			var ver1:Version = cast Main.trackedVersions.get(tag1);
+			var ver2:Version = cast Main.trackedVersions.get(tag2);
+
+			return ver1.lessThanOrEqual(ver2);
+		});
+		Lua_helper.add_callback(lua, "semver_string", function (tag:String):String return Main.trackedVersions.get(tag).toString());
 
 		// ue
 		Lua_helper.add_callback(lua, "addGridBG", function(tag:String, cellWidth:Int, cellHeight:Int, width:Int, height:Int, xVel:Int, yVel:Int)
